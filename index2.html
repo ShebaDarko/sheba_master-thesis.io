@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+        header {
+            background-image: url('images/header_sample.jpg'); /* Replace with your header image path */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header-caption {
+            background-color: rgba(0, 51, 102, 0.7);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .header-caption h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+        }
+        .header-caption p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .projects {
+            margin-top: 20px;
+        }
+        .project {
+            background-color: #f9f9f9;
+            border-left: 5px solid #003366; /* Project title color */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .project h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            color: #003366; /* Project title color */
+        }
+        .project p {
+            color: #666;
+        }
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 0 0 8px 8px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-caption">
+        <h1>Here’s an overview of some of my research projects and interests.</h1>
+        <p>Semi-Supervised Learning, Supervised Learning, Machine Learning for Network Intrusion Detection.</p>
+    </div>
+</header>
+
+<div class="container">
+    <div class="projects">
+        <!-- Project: Sparse Neural Networks -->
+        <div class="project">
+            <h3>Sparse Neural Networks</h3>
+            <p>For this project we used linearized Bregman iterations, in order to train sparse neural networks.</p>
+            <img src="images/sparse_nn.jpg" alt="Sparse Neural Networks" />
+        </div>
+
+        <!-- Project: Convolutional Neural Networks -->
+        <div class="project">
+            <h3>Convolutional Neural Networks</h3>
+            <p>Implementing Convolutional Neural Networks (CNNs) for image classification tasks.</p>
+            <img src="images/cnn.jpg" alt="Convolutional Neural Networks" />
+        </div>
+
+        <!-- Project: Optimization Techniques -->
+        <div class="project">
+            <h3>Optimization Techniques</h3>
+            <p>Exploring various optimization techniques such as gradient descent and its variants.</p>
+            <img src="images/optimization.jpg" alt="Optimization Techniques" />
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
