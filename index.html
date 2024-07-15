@@ -26,50 +26,23 @@
             overflow: hidden;
         }
         header {
-            background-color: #3498db;
+            background-image: url('images/banner.jpg');
+            background-size: cover;
+            background-position: center;
             color: #fff;
-            padding: 20px 0;
+            padding: 80px 0;
             text-align: center;
             border-radius: 8px 8px 0 0;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
-        }
-        header h2 {
-            font-size: 1.5em;
-            margin: 0;
-        }
-        nav {
-            background-color: #2980b9;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease;
-        }
-        nav a:hover {
-            background-color: #2c3e50;
-        }
-        .header-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-        .header-image img {
+        header .profile-image {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin-bottom: 10px;
         }
-        .header-image p {
+        header p {
             font-size: 1.2em;
-            margin: 0;
+            margin: 10px 0;
         }
         .projects {
             display: flex;
@@ -79,7 +52,7 @@
         .project {
             flex: 0 1 calc(48% - 20px); /* Two projects per row with spacing */
             background-color: #f9f9f9;
-            border-left: 5px solid #3498db;
+            border-left: 5px solid #003366; /* Updated project border color */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
@@ -96,7 +69,7 @@
         .project h3 {
             font-size: 1.8em;
             margin-bottom: 10px;
-            color: #3498db;
+            color: #003366; /* Updated project title color */
         }
         .project p {
             color: #666;
@@ -119,20 +92,11 @@
 <body>
 
 <header>
-    <div class="header-image">
-        <img src="profile_image.jpg" alt="Profile Image" />
-        <p>Your Name</p>
-    </div>
+    <img class="profile-image" src="images/sheba.png" alt="Profile Image" />
     <h1>Machine Learning Portfolio</h1>
     <h2>Master Thesis: Machine Learning for Intrusion Detection</h2>
+    <p>Your Name</p>
 </header>
-
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-</nav>
 
 <div class="container">
     <div class="projects">
