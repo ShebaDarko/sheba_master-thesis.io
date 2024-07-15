@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Machine Learning Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,9 +33,6 @@
             margin-bottom: 10px;
             color: #666;
         }
-        p {
-            color: #777;
-        }
         .project {
             margin-bottom: 20px;
             padding: 10px;
@@ -49,14 +46,14 @@
         }
         .project p {
             margin-bottom: 10px;
+            color: #777;
         }
-        .project a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .project a:hover {
-            text-decoration: underline;
+        .project img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -64,28 +61,47 @@
 
 <div class="container">
     <header>
-        <h1>Your Name</h1>
-        <h2>Software Developer | Web Designer</h2>
+        <h1>Machine Learning Portfolio</h1>
+        <h2>Master Thesis: Machine Learning for Intrusion Detection</h2>
     </header>
 
-    <section class="projects">
-        <div class="project">
-            <h3>Project Title 1</h3>
-            <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Technologies used: HTML, CSS, JavaScript</p>
-            <a href="#">View Project</a>
-        </div>
+    <!-- Project: Implementing Neural Network Techniques -->
+    <div class="project">
+        <h3>Implementing Neural Network Techniques</h3>
+        <img src="neural_network.jpg" alt="Neural Network" />
+        <p>Investigated and implemented neural network techniques using TensorFlow and Keras in Jupyter notebook.</p>
+        <p>Detecting anomalies and patterns on network data, focusing on Advanced Persistent Threats (APTs).</p>
+    </div>
 
-        <div class="project">
-            <h3>Project Title 2</h3>
-            <p>Description of Project 2. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <p>Technologies used: Python, Flask, PostgreSQL</p>
-            <a href="#">View Project</a>
-        </div>
+    <!-- Project: Data Processing and Analysis -->
+    <div class="project">
+        <h3>Data Processing and Analysis</h3>
+        <img src="data_processing.jpg" alt="Data Processing" />
+        <p>Performed data processing, feature extraction, and cleaning using Python.</p>
+        <p>Conducted correlation analysis and other statistical explorative analysis.</p>
+    </div>
 
-        <!-- Add more projects as needed -->
+    <!-- Project: Neural Network Model Development -->
+    <div class="project">
+        <h3>Neural Network Model Development</h3>
+        <img src="neural_network_training.jpg" alt="Neural Network Training" />
+        <p>Trained supervised and unsupervised neural network models (Sequential NN, MLP Networks, CNN) for intrusion detection.</p>
+        <p>Implemented models to detect and classify false positives and false negatives.</p>
+    </div>
 
-    </section>
+    <!-- Project: Model Evaluation and Optimization -->
+    <div class="project">
+        <h3>Model Evaluation and Optimization</h3>
+        <img src="model_evaluation.jpg" alt="Model Evaluation" />
+        <p>Developed, experimented, and visualized models, evaluating key metrics and optimizing for optimal performance.</p>
+    </div>
+
+    <!-- Conclusion or Summary -->
+    <div class="project">
+        <h3>Conclusion</h3>
+        <p>Integrated cybersecurity principles and common attack vectors into the intrusion detection process.</p>
+        <p>Conducted anomaly detection and pattern classification on the KDDCup '99 dataset.</p>
+    </div>
 </div>
 
 </body>
