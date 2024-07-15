@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Learning Portfolio</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -14,41 +15,52 @@
             color: #333;
         }
         .container {
-            width: 90%; /* Adjust width as per your preference */
-            max-width: 1200px; /* Maximum width of the container */
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             border-radius: 8px;
             border: 1px solid #ddd;
-            overflow: hidden; /* Ensures content does not overflow */
+            overflow: hidden;
         }
-        header {
+        header, footer {
+            background-color: #3498db;
+            color: #fff;
             text-align: center;
+            padding: 10px 0;
             margin-bottom: 20px;
         }
-        h1 {
+        header h1 {
             font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #3498db;
+            margin: 0;
         }
-        h2 {
+        header h2 {
             font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #555;
+            margin: 0;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .project {
-            margin-bottom: 30px;
-            padding: 20px;
+            flex: 0 1 calc(48% - 20px); /* Two projects per row with spacing */
             background-color: #f9f9f9;
             border-left: 5px solid #3498db;
-            border-radius: 5px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s ease;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
         }
         .project:hover {
+            transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .project-content {
+            padding: 20px;
         }
         .project h3 {
             font-size: 1.8em;
@@ -56,68 +68,71 @@
             color: #3498db;
         }
         .project p {
-            margin-bottom: 15px;
             color: #666;
         }
         .project img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            border-radius: 8px 8px 0 0;
         }
-        .project img:hover {
-            transform: scale(1.05);
+        footer {
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>Machine Learning Portfolio</h1>
+    <h2>Master Thesis: Machine Learning for Intrusion Detection</h2>
+</header>
+
 <div class="container">
-    <header>
-        <h1>Machine Learning Portfolio</h1>
-        <h2>Master Thesis: Machine Learning for Intrusion Detection</h2>
-    </header>
+    <div class="projects">
+        <!-- Project: Implementing Neural Network Techniques -->
+        <div class="project">
+            <img src="neural_network.jpg" alt="Neural Network" />
+            <div class="project-content">
+                <h3>Implementing Neural Network Techniques</h3>
+                <p>Investigated and implemented neural network techniques using TensorFlow and Keras in Jupyter notebook.</p>
+                <p>Detecting anomalies and patterns on network data, focusing on Advanced Persistent Threats (APTs).</p>
+            </div>
+        </div>
 
-    <!-- Project: Implementing Neural Network Techniques -->
-    <div class="project">
-        <h3>Implementing Neural Network Techniques</h3>
-        <img src="neural_network.jpg" alt="Neural Network" />
-        <p>Investigated and implemented neural network techniques using TensorFlow and Keras in Jupyter notebook.</p>
-        <p>Detecting anomalies and patterns on network data, focusing on Advanced Persistent Threats (APTs).</p>
-    </div>
+        <!-- Project: Data Processing and Analysis -->
+        <div class="project">
+            <img src="data_processing.jpg" alt="Data Processing" />
+            <div class="project-content">
+                <h3>Data Processing and Analysis</h3>
+                <p>Performed data processing, feature extraction, and cleaning using Python.</p>
+                <p>Conducted correlation analysis and other statistical explorative analysis.</p>
+            </div>
+        </div>
 
-    <!-- Project: Data Processing and Analysis -->
-    <div class="project">
-        <h3>Data Processing and Analysis</h3>
-        <img src="data_processing.jpg" alt="Data Processing" />
-        <p>Performed data processing, feature extraction, and cleaning using Python.</p>
-        <p>Conducted correlation analysis and other statistical explorative analysis.</p>
-    </div>
+        <!-- Project: Neural Network Model Development -->
+        <div class="project">
+            <img src="neural_network_training.jpg" alt="Neural Network Training" />
+            <div class="project-content">
+                <h3>Neural Network Model Development</h3>
+                <p>Trained supervised and unsupervised neural network models (Sequential NN, MLP Networks, CNN) for intrusion detection.</p>
+                <p>Implemented models to detect and classify false positives and false negatives.</p>
+            </div>
+        </div>
 
-    <!-- Project: Neural Network Model Development -->
-    <div class="project">
-        <h3>Neural Network Model Development</h3>
-        <img src="neural_network_training.jpg" alt="Neural Network Training" />
-        <p>Trained supervised and unsupervised neural network models (Sequential NN, MLP Networks, CNN) for intrusion detection.</p>
-        <p>Implemented models to detect and classify false positives and false negatives.</p>
-    </div>
-
-    <!-- Project: Model Evaluation and Optimization -->
-    <div class="project">
-        <h3>Model Evaluation and Optimization</h3>
-        <img src="model_evaluation.jpg" alt="Model Evaluation" />
-        <p>Developed, experimented, and visualized models, evaluating key metrics and optimizing for optimal performance.</p>
-    </div>
-
-    <!-- Conclusion or Summary -->
-    <div class="project">
-        <h3>Conclusion</h3>
-        <p>Integrated cybersecurity principles and common attack vectors into the intrusion detection process.</p>
-        <p>Conducted anomaly detection and pattern classification on the KDDCup '99 dataset.</p>
+        <!-- Project: Model Evaluation and Optimization -->
+        <div class="project">
+            <img src="model_evaluation.jpg" alt="Model Evaluation" />
+            <div class="project-content">
+                <h3>Model Evaluation and Optimization</h3>
+                <p>Developed, experimented, and visualized models, evaluating key metrics and optimizing for optimal performance.</p>
+            </div>
+        </div>
     </div>
 </div>
+
+<footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
