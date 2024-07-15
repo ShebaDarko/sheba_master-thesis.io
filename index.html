@@ -26,7 +26,7 @@
             overflow: hidden;
         }
         header {
-            background-image: url('images/header_sample.jpg'); /* Replace with your header image path */
+            background-image: url('images/banner.jpg');
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -34,40 +34,56 @@
             text-align: center;
             border-radius: 8px 8px 0 0;
         }
-        .header-caption {
-            background-color: rgba(0, 51, 102, 0.7);
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 20px;
+        header .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
-        .header-caption h1 {
-            font-size: 2.5em;
+        header p {
+            font-size: 1.2em;
             margin: 10px 0;
         }
-        .header-caption p {
-            font-size: 1.2em;
-            margin: 0;
+        nav {
+            background-color: #2980b9;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #2c3e50;
         }
         .projects {
-            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .project {
+            flex: 0 1 calc(48% - 20px); /* Two projects per row with spacing */
             background-color: #f9f9f9;
-            border-left: 5px solid #003366; /* Project title color */
+            border-left: 5px solid #3498db;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
-            padding: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
         }
         .project:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
+        .project-content {
+            padding: 20px;
+        }
         .project h3 {
             font-size: 1.8em;
             margin-bottom: 10px;
-            color: #003366; /* Project title color */
+            color: #3498db;
         }
         .project p {
             color: #666;
@@ -75,8 +91,7 @@
         .project img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            margin-top: 10px;
+            border-radius: 8px 8px 0 0;
         }
         footer {
             background-color: #3498db;
@@ -91,33 +106,58 @@
 <body>
 
 <header>
-    <div class="header-caption">
-        <h1>Here’s an overview of some of my research projects and interests.</h1>
-        <p>Semi-Supervised Learning, Supervised Learning, Machine Learning for Network Intrusion Detection.</p>
-    </div>
+    <img class="profile-image" src="images/sheba.png" alt="Profile Image" />
+    <h1>Machine Learning Portfolio</h1>
+    <h2>Master Thesis: Machine Learning for Intrusion Detection</h2>
+    <p>Your Name</p>
 </header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
 
 <div class="container">
     <div class="projects">
-        <!-- Project: Sparse Neural Networks -->
+        <!-- Project: Implementing Neural Network Techniques -->
         <div class="project">
-            <h3>Sparse Neural Networks</h3>
-            <p>For this project we used linearized Bregman iterations, in order to train sparse neural networks.</p>
-            <img src="images/sparse_nn.jpg" alt="Sparse Neural Networks" />
+            <img src="neural_network.jpg" alt="Neural Network" />
+            <div class="project-content">
+                <h3>Implementing Neural Network Techniques</h3>
+                <p>Investigated and implemented neural network techniques using TensorFlow and Keras in Jupyter notebook.</p>
+                <p>Detecting anomalies and patterns on network data, focusing on Advanced Persistent Threats (APTs).</p>
+            </div>
         </div>
 
-        <!-- Project: Convolutional Neural Networks -->
+        <!-- Project: Data Processing and Analysis -->
         <div class="project">
-            <h3>Convolutional Neural Networks</h3>
-            <p>Implementing Convolutional Neural Networks (CNNs) for image classification tasks.</p>
-            <img src="images/cnn.jpg" alt="Convolutional Neural Networks" />
+            <img src="data_processing.jpg" alt="Data Processing" />
+            <div class="project-content">
+                <h3>Data Processing and Analysis</h3>
+                <p>Performed data processing, feature extraction, and cleaning using Python.</p>
+                <p>Conducted correlation analysis and other statistical explorative analysis.</p>
+            </div>
         </div>
 
-        <!-- Project: Optimization Techniques -->
+        <!-- Project: Neural Network Model Development -->
         <div class="project">
-            <h3>Optimization Techniques</h3>
-            <p>Exploring various optimization techniques such as gradient descent and its variants.</p>
-            <img src="images/optimization.jpg" alt="Optimization Techniques" />
+            <img src="neural_network_training.jpg" alt="Neural Network Training" />
+            <div class="project-content">
+                <h3>Neural Network Model Development</h3>
+                <p>Trained supervised and unsupervised neural network models (Sequential NN, MLP Networks, CNN) for intrusion detection.</p>
+                <p>Implemented models to detect and classify false positives and false negatives.</p>
+            </div>
+        </div>
+
+        <!-- Project: Model Evaluation and Optimization -->
+        <div class="project">
+            <img src="model_evaluation.jpg" alt="Model Evaluation" />
+            <div class="project-content">
+                <h3>Model Evaluation and Optimization</h3>
+                <p>Developed, experimented, and visualized models, evaluating key metrics and optimizing for optimal performance.</p>
+            </div>
         </div>
     </div>
 </div>
