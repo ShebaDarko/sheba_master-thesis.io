@@ -25,15 +25,19 @@
             border: 1px solid #ddd;
             overflow: hidden;
         }
-        header {
-            background-image: url('images/graphviz4.svg'); /* Replace with your header image path */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-        }
+       header {
+    background-image: url('images/graphviz4.svg'); /* Replace with your header image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 40px 0; /* Adjusted padding to reduce the header height */
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    height: 200px; /* Set a fixed height for the header */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+}
         .header-caption {
             background-color: rgba(0, 51, 102, 0.7);
             padding: 10px;
