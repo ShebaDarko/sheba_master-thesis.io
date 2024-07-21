@@ -5,141 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Machine Learning Portfolio</title>
     <style>
-        /* General Styles */
+        /* Reset and General Styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #444;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        .container {
-            width: 90%; 
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            overflow: hidden;
-        }
-       header {
-    background-image: url('images/graphviz4.svg'); /* Replace with your header image path */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 40px 0; /* Adjusted padding to reduce the header height */
-    text-align: center;
-    border-radius: 8px 8px 0 0;
-    height: 200px; /* Set a fixed height for the header */
-    display: flex;
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-}
-        .header-caption {
-            background-color: rgba(0, 51, 102, 0.7);
-            padding: 10px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .header-caption h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
-        }
-        .header-caption p {
-            font-size: 1.2em;
-            margin: 0;
-        }
-        .projects {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
+            flex-direction: column;
+            background-color: #eaeaea;
         }
-        .project {
-            flex: 0 1 calc(32% - 20px); /* Three projects per row with spacing */
-            background-color: #f9f9f9;
-            border-left: 5px solid #003366; /* Project title color */
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+
+        header {
+            background: linear-gradient(to bottom right, #0066cc, #3399ff);
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+            background-image: url('images/graphviz4.svg');
+            background-size: cover;
+            background-position: center;
+            background-blur: 5px; /* Optional, for a blurred background effect */
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            display: inline-block;
             padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .header-content h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .header-content p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto; /* Adjusted margin to avoid overlap */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .project {
+            background: #fff;
+            border: 2px solid #0066cc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
+
         .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .project h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #003366; /* Project title color */
-        }
-        .project p {
-            color: #666;
-        }
+
         .project img {
             width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-top: 10px;
         }
+
+        .project h3 {
+            color: #0066cc;
+            margin: 10px 0;
+            font-size: 1.4em;
+        }
+
+        .project p {
+            color: #666;
+        }
+
         footer {
-            background-color: #3498db;
+            background-color: #0066cc;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            border-radius: 0 0 8px 8px;
-            margin-top: 20px;
+            padding: 15px 20px;
+            border-top: 1px solid #004d99;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="header-caption">
-        <h1>Here’s an overview of some of my research projects and interests.</h1>
-        <p> Supervised classification techniques using  Machine Learning for Network Intrusion Detection.</p>
+    <div class="header-content">
+        <h1>Explore My Machine Learning Projects</h1>
+        <p>Specializing in advanced classification techniques for Network Intrusion Detection.</p>
     </div>
 </header>
 
 <div class="container">
-    <section class="projects">
-        <!-- Project: Supervised Neural Networks -->
-        <article class="project">
-            <h3>Supervised and unsupervised Neural Networks</h3>
-            <p>For this project we used linearized Bregman iterations, in order to train sparse neural networks.</p>
-            <img src="images/pca1.png" alt="Supervised Neural Networks" />
-        </article>
+    <!-- Project: Supervised Neural Networks -->
+    <article class="project">
+        <h3>Supervised and Unsupervised Neural Networks</h3>
+        <p>This project explores linearized Bregman iterations for training sparse neural networks.</p>
+        <img src="images/pca1.png" alt="Supervised Neural Networks" />
+        <img src="images/graphviz4.svg" alt="Unsupervised Neural Networks" />
+    </article>
 
-        <div class="container">
-    <section class="projects">
-        <!-- Project: Supervised Neural Networks -->
-        <article class="project">
-            <h3>Supervised and Unsupervised Neural Networks</h3>
-            <p>For this project, we used linearized Bregman iterations to train sparse neural networks.</p>
-            <div class="image-container">
-                <img src="images/pca1.png" alt="Supervised Neural Networks" />
-                <img src="images/graphviz4.svg" alt="Unsupervised Neural Networks" />
-            </div>
-        </article>
-    </section>
-</div>
+    <!-- Project: Convolutional Neural Networks -->
+    <article class="project">
+        <h3>Convolutional Neural Networks (CNNs)</h3>
+        <p>Focused on image classification tasks using advanced CNN techniques.</p>
+        <img src="images/graphviz.svg" alt="Convolutional Neural Networks" />
+    </article>
 
-        <!-- Project: Supervised Neural Networks -->
-        <article class="project">
-            <h3>Supervised Neural Networks</h3>
-            <p>Implementing Convolutional Neural Networks (CNNs) for image classification tasks.</p>
-            <img src="images/graphviz.svg" alt="Convolutional Neural Networks" />
-        </article>
-
-        
-
-
-        <!-- Add more projects as needed -->
-    </section>
+    <!-- Add more projects as needed -->
 </div>
 
 <footer>
