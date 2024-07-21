@@ -26,23 +26,29 @@
             padding: 60px 20px;
             position: relative;
             overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('images/graphviz4.svg');
             background-size: cover;
             background-position: center;
-            background-blur: 5px; /* Optional, for a blurred background effect */
+            opacity: 0.3;
+            z-index: 0;
         }
 
         .header-content {
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
-            display: inline-block;
-            padding: 20px;
-            border-radius: 10px;
         }
 
         .header-content h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 0;
         }
 
@@ -124,7 +130,7 @@
         <img src="images/graphviz4.svg" alt="Unsupervised Neural Networks" />
     </article>
 
-    <!-- Project: Convolutional Neural Networks -->
+    <!-- Project: Supervised Neural Networks -->
     <article class="project">
         <h3>Convolutional Neural Networks (CNNs)</h3>
         <p>Focused on image classification tasks using advanced CNN techniques.</p>
