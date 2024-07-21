@@ -6,26 +6,18 @@
     <title>Machine Learning Portfolio</title>
     <style>
         /* General Styles */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
             background-color: #f0f0f0;
             color: #333;
         }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
         .container {
-            flex: 1;
-            width: 100%;
+            width: 90%; 
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -33,91 +25,67 @@
             border: 1px solid #ddd;
             overflow: hidden;
         }
-
-        header {
-            background-image: url('images/graphviz4.svg'); /* Replace with your header image path */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 8px 8px 0 0;
-            height: 200px; /* Adjust this height if needed */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
+       header {
+    background-image: url('images/graphviz4.svg'); /* Replace with your header image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 40px 0; /* Adjusted padding to reduce the header height */
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    height: 200px; /* Set a fixed height for the header */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+}
         .header-caption {
             background-color: rgba(0, 51, 102, 0.7);
             padding: 10px;
             border-radius: 8px;
             margin-top: 20px;
         }
-
         .header-caption h1 {
             font-size: 2.5em;
             margin: 10px 0;
         }
-
         .header-caption p {
             font-size: 1.2em;
             margin: 0;
         }
-
         .projects {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             margin-top: 20px;
         }
-
         .project {
-            flex: 1 1 calc(32% - 20px); /* Adjusted for responsive design */
+            flex: 0 1 calc(32% - 20px); /* Three projects per row with spacing */
             background-color: #f9f9f9;
-            border-left: 5px solid #003366;
+            border-left: 5px solid #003366; /* Project title color */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
             padding: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
         .project:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
         }
-
         .project h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
-            color: #003366;
+            color: #003366; /* Project title color */
         }
-
         .project p {
             color: #666;
         }
-
         .project img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-top: 10px;
         }
-
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 20px 0;
-        }
-
-        .image-container img {
-            max-width: 48%;
-            height: auto;
-            margin: 1%;
-        }
-
         footer {
             background-color: #3498db;
             color: #fff;
@@ -133,11 +101,20 @@
 <header>
     <div class="header-caption">
         <h1>Here’s an overview of some of my research projects and interests.</h1>
-        <p>Supervised classification techniques using Machine Learning for Network Intrusion Detection.</p>
+        <p> Supervised classification techniques using  Machine Learning for Network Intrusion Detection.</p>
     </div>
 </header>
 
 <div class="container">
+    <section class="projects">
+        <!-- Project: Supervised Neural Networks -->
+        <article class="project">
+            <h3>Supervised and unsupervised Neural Networks</h3>
+            <p>For this project we used linearized Bregman iterations, in order to train sparse neural networks.</p>
+            <img src="images/pca1.png" alt="Supervised Neural Networks" />
+        </article>
+
+        <div class="container">
     <section class="projects">
         <!-- Project: Supervised Neural Networks -->
         <article class="project">
@@ -148,6 +125,8 @@
                 <img src="images/graphviz4.svg" alt="Unsupervised Neural Networks" />
             </div>
         </article>
+    </section>
+</div>
 
         <!-- Project: Supervised Neural Networks -->
         <article class="project">
@@ -155,6 +134,9 @@
             <p>Implementing Convolutional Neural Networks (CNNs) for image classification tasks.</p>
             <img src="images/graphviz.svg" alt="Convolutional Neural Networks" />
         </article>
+
+        
+
 
         <!-- Add more projects as needed -->
     </section>
