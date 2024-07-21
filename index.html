@@ -6,19 +6,26 @@
     <title>Machine Learning Portfolio</title>
     <style>
         /* General Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             background-color: #f0f0f0;
             color: #333;
         }
 
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
         .container {
-            width: 100%; 
+            flex: 1;
+            width: 100%;
             max-width: 1200px;
-            margin: auto;
+            margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -32,28 +39,29 @@
             background-size: cover;
             background-position: center;
             color: #fff;
-            padding: 20px 0; /* Adjusted padding to reduce the header height */
+            padding: 40px 20px;
             text-align: center;
             border-radius: 8px 8px 0 0;
-            height: 150px; /* Set a smaller fixed height for the header */
+            height: 200px; /* Adjust this height if needed */
             display: flex;
-            align-items: center; /* Vertically center the content */
-            justify-content: center; /* Horizontally center the content */
+            align-items: center;
+            justify-content: center;
         }
 
         .header-caption {
             background-color: rgba(0, 51, 102, 0.7);
             padding: 10px;
             border-radius: 8px;
+            margin-top: 20px;
         }
 
         .header-caption h1 {
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 10px 0;
         }
 
         .header-caption p {
-            font-size: 1em;
+            font-size: 1.2em;
             margin: 0;
         }
 
@@ -65,9 +73,9 @@
         }
 
         .project {
-            flex: 0 1 calc(32% - 20px); /* Three projects per row with spacing */
+            flex: 1 1 calc(32% - 20px); /* Adjusted for responsive design */
             background-color: #f9f9f9;
-            border-left: 5px solid #003366; /* Project title color */
+            border-left: 5px solid #003366;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
@@ -83,7 +91,7 @@
         .project h3 {
             font-size: 1.5em;
             margin-bottom: 10px;
-            color: #003366; /* Project title color */
+            color: #003366;
         }
 
         .project p {
@@ -99,15 +107,15 @@
 
         .image-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             flex-wrap: wrap;
             padding: 20px 0;
         }
 
         .image-container img {
-            width: 49%;
+            max-width: 48%;
             height: auto;
-            border-radius: 8px;
+            margin: 1%;
         }
 
         footer {
@@ -131,7 +139,7 @@
 
 <div class="container">
     <section class="projects">
-        <!-- Project: Supervised and Unsupervised Neural Networks -->
+        <!-- Project: Supervised Neural Networks -->
         <article class="project">
             <h3>Supervised and Unsupervised Neural Networks</h3>
             <p>For this project, we used linearized Bregman iterations to train sparse neural networks.</p>
