@@ -16,14 +16,14 @@
         body {
             display: flex;
             flex-direction: column;
-            background-color: #eaeaea;
+            background-color: #f5f5f5;
         }
 
         header {
-            background: linear-gradient(to bottom right, #0066cc, #3399ff);
+            background: linear-gradient(to bottom right, #003366, #0066cc); /* Darker gradient for better text contrast */
             color: #fff;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px; /* Increased padding for more space */
             position: relative;
             overflow: hidden;
             background-image: url('images/graphviz4.svg');
@@ -35,27 +35,27 @@
         .header-content {
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5); /* Darker semi-transparent background */
             display: inline-block;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            max-width: 90%;
+            max-width: 80%; /* Limited width for better appearance */
             margin: 0 auto;
         }
 
         .header-content h1 {
-            font-size: 2.5em;
+            font-size: 2.8em; /* Increased font size for better readability */
             margin: 0;
         }
 
         .header-content p {
-            font-size: 1.2em;
+            font-size: 1.3em; /* Slightly larger font size */
             margin-top: 10px;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 20px auto; /* Adjusted margin to avoid overlap */
+            max-width: 1000px; /* Adjusted container width */
+            margin: 30px auto; /* Added margin for spacing */
             padding: 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -63,12 +63,11 @@
             background: #fff;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 10px;
-            position: relative;
         }
 
         .project {
             background: #fff;
-            border: 2px solid #0066cc;
+            border: 2px solid #003366; /* Darker border color */
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -88,7 +87,7 @@
         }
 
         .project h3 {
-            color: #0066cc;
+            color: #003366; /* Darker text color for better contrast */
             margin: 10px 0;
             font-size: 1.4em;
         }
@@ -98,11 +97,11 @@
         }
 
         footer {
-            background-color: #0066cc;
+            background-color: #003366; /* Darker footer color for consistency */
             color: #fff;
             text-align: center;
             padding: 15px 20px;
-            border-top: 1px solid #004d99;
+            border-top: 1px solid #002244;
         }
     </style>
 </head>
